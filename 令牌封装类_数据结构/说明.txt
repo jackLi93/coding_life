@@ -1,0 +1,2 @@
+这两个类功能相似，封装了ConcurrentHashMap和AtomicLongArray，用于并发操作。
+可以将持久化的数据存入该结构中。
