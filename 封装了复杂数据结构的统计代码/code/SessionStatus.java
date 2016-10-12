@@ -1,12 +1,10 @@
-package cn.migu.adp.dmp.query_service;
+
 
 import java.util.Iterator;
 import java.util.Random;
 import java.util.TreeSet;
 
-/**
- * Created by Smart on 2016/9/27.
- */
+
 public class SessionStatus implements Comparable {
 
     private String userName;    //访问用户名
