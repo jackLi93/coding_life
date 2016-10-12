@@ -1,6 +1,4 @@
-package cn.migu.adp.dmp.query_service;
-
-import com.iflytek.gnome.share.GLog;
+package com.jack.codelife
 
 import java.sql.SQLException;
 import java.util.*;
