@@ -179,6 +179,38 @@ public class EsHelper {
         UserRole userRole = getUserRole("dmp","phone","13524356198");
         String userDesc = getUserDesc(userRole);
         System.out.print(userDesc);
+		
+		
+		//批量读取文件并查询的代码
+//        String file = "d:/userinfo.csv";
+//        BufferedReader br = null;
+//
+//        try {
+//            br = new BufferedReader(new FileReader(new File(file)));
+//
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                if(line.contains("###")){
+//                    break;
+//                }
+//                String[] tmp = line.split(",");
+//                if (tmp.length == 2) {
+//                    System.out.println(tmp[0] + "\t" + tmp[1] + "\t" + getUserDesc(getUserRole("dmp", "phone", tmp[1])));
+//                }
+//            }
+//
+//
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                if (br != null) {
+//                    br.close();
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
     }
 }

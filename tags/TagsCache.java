@@ -26,5 +26,31 @@ public class TagsCache {
         TagCache.put("53202","爱好篮球");
 
     }
+		// 动态加载资源的方法，资源文件批量写入
+	    static {
+        BufferedReader br = null;
+
+        try {
+            br = new BufferedReader(new FileReader(new File(Thread.currentThread().getContextClassLoader().getResource("tag_set.txt").getPath())));//tag_set放在工程的资源文件下，动态加载资源
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                String[] tmp = line.split("\t");
+                if (tmp.length == 11) {
+                    TagCache.put(tmp[1], tmp[4]);
+                }
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
